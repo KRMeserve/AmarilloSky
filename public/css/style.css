@@ -1,3 +1,6 @@
+html {
+    height: 100%;
+}
 footer {
     background-color: grey;
     height: 50px;
@@ -20,17 +23,16 @@ footer img:hover {
     opacity: .7;
 }
 body {
+    position: relative;
     margin: 0;
-    height: 100vh;
-    width: 98.5vw;
+    min-height: 93%;
+    width: 100vw;
+    padding-bottom: 4rem;
     background-color: rgba(40, 40, 40, 1);
     color: white;
 }
 .social-media {
     padding-left: 15px;
-}
-.copyright {
-    padding-right: 15px;
 }
 a {
     text-decoration: none;
@@ -39,6 +41,12 @@ a {
 }
 a:hover {
     opacity: .7;
+}
+.copyright {
+    padding-right: 15px;
+}
+.copyright a {
+    text-decoration: underline;
 }
 .nav-bar {
     background-color: grey;
@@ -60,7 +68,7 @@ header {
 header h1 {
     text-align: center;
     color: transparent;
-    padding: 75px;
+    padding: 150px;
     margin: 0;
 }
 .homepage-background {
