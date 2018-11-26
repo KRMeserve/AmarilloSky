@@ -13,7 +13,9 @@ class About extends React.Component{
                     </nav>
                 </header>
                 <main>
-                    <h1>You have reached the About Page.</h1>
+                    <h3>About Amarillo Sky</h3>
+                    <p>Comprised of great musicians from the Michiana area, Amarillo Sky is a modern country cover band that is sure to entertain. They play songs by the country stars that you hear on the radio every day like Luke Bryan, Jason Aldean, Rascal Flatts, Thomas Rhett, Dan & Shay, and Keith Urban – just to name a few. You’ll probably hear one of your favorites. So if you like the new country, come on out to see them and be ready to dance the night away!</p>
+                    <h3>Q/A Section?</h3>
                 </main>
             </div>
         )

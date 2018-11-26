@@ -35,7 +35,7 @@ class HomePage extends React.Component{
                         <main>
                             <div className="homepage-background">
                                 <div>
-                                    <img src="/img/carousel.png"></img>
+                                    <Carousel></Carousel>
                                 </div>
                                 <div className="fb-page" data-href="https://www.facebook.com/AmarilloSkyBand/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AmarilloSkyBand/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmarilloSkyBand/">Amarillo Sky</a></blockquote></div>
                             </div>
