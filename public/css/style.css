@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 footer {
-    background-color: grey;
+    background-color: rgb(140, 125, 174);
     height: 50px;
     width: 100%;
     position: absolute;
@@ -49,7 +49,7 @@ a:hover {
     text-decoration: underline;
 }
 .nav-bar {
-    background-color: grey;
+    background-color: rgb(140, 125, 174);
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -74,4 +74,13 @@ header h1 {
 .homepage-background {
     display: flex;
     justify-content: space-between;
+}
+.homepage-background img {
+    width: 80%;
+    padding: 30px;
+    height: auto;
+    align-self: center;
+}
+.fb-page {
+    margin: 30px;
 }
