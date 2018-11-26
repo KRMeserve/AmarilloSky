@@ -50,6 +50,24 @@ class HomePage extends React.Component{
                     :
                     ''
                 }
+                {this.state.displayBandPage
+                    ?
+                    <Band changeDisplay={this.changeDisplay}></Band>
+                    :
+                    ''
+                }
+                {this.state.displayAboutPage
+                    ?
+                    <About changeDisplay={this.changeDisplay}></About>
+                    :
+                    ''
+                }
+                {this.state.displayContactPage
+                    ?
+                    <Contact changeDisplay={this.changeDisplay}></Contact>
+                    :
+                    ''
+                }
                 <Footer></Footer>
             </div>
         )

@@ -1,4 +1,21 @@
 class Events extends React.Component{
+    constructor(props){
+        super(props);
+        this.getEvents = this.getEvents.bind(this);
+        this.state = {
+            events: []
+        }
+    }
+    componentDidMount(){
+        this.getEvents();
+    }
+    getEvents(){
+        fetch('/events').then(response => response.json()).then(data =>{
+            this.setState({
+                events: data
+            })
+        })
+    }
     render(){
         return(
             <div>
@@ -13,7 +30,7 @@ class Events extends React.Component{
                     </nav>
                 </header>
                 <main>
-                    <h1>You have reached the Events Page.</h1>
+                    <EventsList events={this.state.events}></EventsList>
                 </main>
             </div>
         )
