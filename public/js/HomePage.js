@@ -3,7 +3,8 @@ class HomePage extends React.Component{
         super(props);
         this.changeDisplay = this.changeDisplay.bind(this);
         this.state = {
-            displayHomePage: true,
+            displayLandingPage: true,
+            displayHomePage: false,
             displayEventsPage: false,
             displayAboutPage: false,
             displayBandPage: false,
@@ -19,6 +20,7 @@ class HomePage extends React.Component{
     render(){
         return(
             <div>
+                {this.state.displayLandingPage ? <LandingPage changeDisplay={this.changeDisplay}></LandingPage> : ''}
                 {this.state.displayHomePage
                     ?
                     <div>
@@ -37,7 +39,7 @@ class HomePage extends React.Component{
                                 <div>
                                     <Carousel></Carousel>
                                 </div>
-                                <div className="fb-page" data-href="https://www.facebook.com/AmarilloSkyBand/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AmarilloSkyBand/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmarilloSkyBand/">Amarillo Sky</a></blockquote></div>
+                                {/* <div className="fb-page" data-href="https://www.facebook.com/AmarilloSkyBand/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AmarilloSkyBand/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmarilloSkyBand/">Amarillo Sky</a></blockquote></div> */}
                             </div>
                         </main>
                     </div>
