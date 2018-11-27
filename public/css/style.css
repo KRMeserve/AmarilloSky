@@ -106,6 +106,9 @@ header h1 {
 .bold {
     font-weight: 700;
 }
+.italic {
+    font-style: italic;
+}
 .landing-page-background {
     background: url('../img/landing-background2.png');
     background-size: cover;

@@ -15,8 +15,10 @@ class Event
                 "location" => result["location"],
                 "venue" => result["venue"],
                 "price" => result["price"].to_i,
+                "event" => result["event"],
                 "venue_contact" => result["venue_contact"],
-                "description" => result["description"],
+                "event_day" => result["event_day"],
+                "duration" => result["duration"],
             }
         end
     end
@@ -28,17 +30,19 @@ class Event
             "location" => results.first["location"],
             "venue" => results.first["venue"],
             "price" => results.first["price"].to_i,
+            "event" => results.first["event"],
             "venue_contact" => results.first["venue_contact"],
-            "description" => results.first["description"],
+            "event_day" => results.first["event_day"],
+            "duration" => results.first["duration"],
         }
     end
 
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO events (location, venue, price, venue_contact, description)
-                VALUES ( '#{opts["location"]}', '#{opts["venue"]}', #{opts["price"]}, '#{opts["venue_contact"]}', '#{opts["description"]}' )
-                RETURNING id, location, venue, price, venue_contact, description;
+                INSERT INTO events (location, venue, price, venue_contact, event_day)
+                VALUES ( '#{opts["location"]}', '#{opts["venue"]}', #{opts["price"]}, '#{opts["event"]}' '#{opts["venue_contact"]}', '#{opts["event_day"]}', '#{opts["duration"]}' )
+                RETURNING id, location, venue, price, venue_contact, event_day, duration;
             SQL
         )
         return {
@@ -46,8 +50,10 @@ class Event
             "location" => results.first["location"],
             "venue" => results.first["venue"],
             "price" => results.first["price"].to_i,
+            "event" => results.first["event"],
             "venue_contact" => results.first["venue_contact"],
-            "description" => results.first["description"],
+            "event_day" => results.first["event_day"],
+            "duration" => results.first["duration"],
         }
     end
 
@@ -60,9 +66,9 @@ class Event
         results = DB.exec(
             <<-SQL
                 UPDATE events
-                SET location='#{opts["location"]}', venue='#{opts["venue"]}', price=#{opts["price"]}, venue_contact='#{opts["venue_contact"]}', description='#{opts["description"]}'
+                SET location='#{opts["location"]}', venue='#{opts["venue"]}', price=#{opts["price"]}, event='#{opts["event"]}', venue_contact='#{opts["venue_contact"]}', event_day='#{opts["event_day"]}', duration='#{opts["duration"]}'
                 WHERE id=#{id}
-                RETURNING id, location, venue, price, venue_contact, description;
+                RETURNING id, location, venue, price, event, venue_contact, event_day, duration;
             SQL
         )
         return {
@@ -70,8 +76,10 @@ class Event
             "location" => results.first["location"],
             "venue" => results.first["venue"],
             "price" => results.first["price"].to_i,
+            "event" => results.first["event"],
             "venue_contact" => results.first["venue_contact"],
-            "description" => results.first["description"],
+            "event_day" => results.first["event_day"],
+            "duration" => restuls.first["duration"],
         }
     end
 
