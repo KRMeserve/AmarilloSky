@@ -12,8 +12,37 @@ class Contact extends React.Component{
                         <a href="#">Contact Us</a>
                     </nav>
                 </header>
-                <main>
-                    <h1>You have reached the Contact Page.</h1>
+                <main class="contacts-page">
+                    <div class="article-container">
+                        <div class="article">
+                            <h1 class="title">Contact Us</h1>
+                            <a href="mailto:s.harrier@comcast.net?Subject=Book%20Amarillo%20Sky"><button class="input-button">Book Amarillo Sky</button></a>
+                            <p>Contacting us through the above button is preferred. You may also call our manager at 574-524-0742 or send us a message on <a href="https://www.facebook.com/AmarilloSkyBand/"> FaceBook </a> to inquire about anything band-related. </p>
+                        </div>
+                        <div class="article">
+                            <h1 class="title">Distance</h1>
+                            <p>Amarillo Sky travels up to 120 miles from their hometown of Elkhart, IN. We bring most of our own equipment and can be booked to play anywhere from 60-240 minute gigs.</p>
+                        </div>
+                        <div class="article">
+                            <h1 class="title">Set List</h1>
+                            <p>We are continually learning new country hits to add to our set lists. We have some songs that are particularly geared towards weddings that we can email you. Here are some of the songs we currently perform as of March 2018.</p>
+                            <ul>
+                                <li><span class="bold">Seeing Red</span> - Dustin Lynch</li>
+                                <li><span class="bold">Wasted Time</span> - Keith Urban</li>
+                                <li><span class="bold">If the Boot Fits</span> - Granger Smith</li>
+                                <li><span class="bold">Cruise</span> - Florida Georgia Line</li>
+                                <li><span class="bold">Homegrown</span> - Zac Brown Band</li>
+                                <li><span class="bold">Country Girl</span> - Luke Bryan</li>
+                                <li><span class="bold">SnapBack</span> - Old Dominion</li>
+                                <li><span class="bold">All Night to Get There</span> - Rascal Flatts</li>
+                                <li><span class="bold">Hey Girl</span> - Billy Currington</li>
+                                <li><span class="bold">Ring on Every Finger</span> - Locash</li>
+                                <li><span class="bold">Somebody Else Will</span> - Justin Moore</li>
+                                <li><span class="bold">We Went</span> - Randy Houser</li>
+                                <li><span class="bold">My Kinda Party</span> - Jason Aldean</li>
+                            </ul>
+                        </div>
+                    </div>
                 </main>
             </div>
         )

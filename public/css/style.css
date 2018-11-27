@@ -131,6 +131,12 @@ header h1 {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.contacts-page {
+    background-image: url('../img/contact-background.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .input-button {
     display: block;
     margin: 0 auto;

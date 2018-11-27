@@ -41,8 +41,9 @@ class About extends React.Component{
                             ''
                         }
                         <div class="article">
-                            <h3 class="title">Q/A Section?</h3>
-                            <p>Possible Answer Area</p>
+                            <h3 class="title">Why Amarillo Sky?</h3>
+                            <p>Sometimes we get asked, <span class="bold">“Why do you call yourselves Amarillo Sky?”</span> Well, just like Jason Aldean’s song of the same name, we are all about puttin' in a full day’s work for the ones we love and the One above. And at the end of the day, we just want to let loose with some folks who do the same.</p>
+                            <p>We work hard so that we can play for you.</p>
                         </div>
                     </div>
                 </main>
