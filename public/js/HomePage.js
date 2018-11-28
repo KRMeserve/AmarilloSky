@@ -10,6 +10,7 @@ class HomePage extends React.Component{
             displayAboutPage: false,
             displayBandPage: false,
             displayContactPage: false,
+            now: now
         }
     };
     changeDisplay(dis1, dis2) {
@@ -17,6 +18,7 @@ class HomePage extends React.Component{
             [dis1]: !this.state[dis1],
             [dis2]: !this.state[dis2]
         })
+        console.log(this.state.now);
     }
     render(){
         return(

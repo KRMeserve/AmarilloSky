@@ -14,9 +14,6 @@ class Event
                 'id' => result["id"].to_i,
                 "location" => result["location"],
                 "venue" => result["venue"],
-                "price" => result["price"].to_i,
-                "event" => result["event"],
-                "venue_contact" => result["venue_contact"],
                 "event_day" => result["event_day"],
                 "duration" => result["duration"],
             }
@@ -29,9 +26,6 @@ class Event
             "id" => results.first["id"].to_i,
             "location" => results.first["location"],
             "venue" => results.first["venue"],
-            "price" => results.first["price"].to_i,
-            "event" => results.first["event"],
-            "venue_contact" => results.first["venue_contact"],
             "event_day" => results.first["event_day"],
             "duration" => results.first["duration"],
         }
@@ -63,20 +57,17 @@ class Event
         results = DB.exec(
             <<-SQL
                 UPDATE events
-                SET location='#{opts["location"]}', venue='#{opts["venue"]}', price=#{opts["price"]}, event='#{opts["event"]}', venue_contact='#{opts["venue_contact"]}', event_day='#{opts["event_day"]}', duration='#{opts["duration"]}'
+                SET location='#{opts["location"]}', venue='#{opts["venue"]}', event_day='#{opts["event_day"]}', duration='#{opts["duration"]}'
                 WHERE id=#{id}
-                RETURNING id, location, venue, price, event, venue_contact, event_day, duration;
+                RETURNING id, location, venue, event_day, duration;
             SQL
         )
         return {
             "id" => results.first["id"].to_i,
             "location" => results.first["location"],
             "venue" => results.first["venue"],
-            "price" => results.first["price"].to_i,
-            "event" => results.first["event"],
-            "venue_contact" => results.first["venue_contact"],
             "event_day" => results.first["event_day"],
-            "duration" => restuls.first["duration"],
+            "duration" => results.first["duration"],
         }
     end
 

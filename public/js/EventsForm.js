@@ -8,6 +8,7 @@ class EventsForm extends React.Component {
             venue: '',
             event_day: '',
             duration: '',
+            id: '',
         }
     }
     componentDidMount(){
@@ -16,7 +17,8 @@ class EventsForm extends React.Component {
                 location: this.props.event.location,
                 venue: this.props.event.venue,
                 event_day: this.props.event.event_day,
-                duration: this.props.event.duration
+                duration: this.props.event.duration,
+                id: this.props.event.id
             })
         }
     }
