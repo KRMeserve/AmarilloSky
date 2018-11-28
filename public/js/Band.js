@@ -12,8 +12,29 @@ class Band extends React.Component{
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayContactPage', 'displayBandPage')}}>Contact Us</a>
                     </nav>
                 </header>
-                <main>
-                    <h1>You have reached the Band Page.</h1>
+                <main class="band-background">
+                    <div class="band-container">
+                        <div class='band-member'>
+                            <h1>Tanner "The Voice" Smale</h1>
+                            <h1>Lead Vocals</h1>
+                            <p>Picture will go here.</p>
+                        </div>
+                        <div class='band-member'>
+                            <h1>Rob "Thunder" Harrier</h1>
+                            <h1>Bass/Backup Vocals</h1>
+                            <p>Picture will go here.</p>
+                        </div>
+                        <div class='band-member'>
+                            <h1>Jerry "The Animal" Smith</h1>
+                            <h1>Drums/Backup Vocals</h1>
+                            <p>Picture will go here.</p>
+                        </div>
+                        <div class='band-member'>
+                            <h1>Adam "The Magnet" Sarna</h1>
+                            <h1>Guitar</h1>
+                            <p>Picture will go here.</p>
+                        </div>
+                    </div>
                 </main>
             </div>
         )

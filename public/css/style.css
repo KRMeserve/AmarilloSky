@@ -109,6 +109,13 @@ header h1 {
 .italic {
     font-style: italic;
 }
+/* Keyframes! */
+
+@keyframes slide-in {
+    0%: {transform: translate(100vw);}
+    100%: {transform: translate(0vw);}
+}
+/* End of Keyframes  */
 .landing-page-background {
     background: url('../img/landing-background2.png');
     background-size: cover;
@@ -127,6 +134,8 @@ header h1 {
     width: 100%;
     padding: 15px 0;
     background-color: rgba(255, 255, 255, 0.8);
+    animation-name: slide-in;
+    animation-duration: .4s;
 }
 .about-page {
     background-image: url('../img/about-background.png');
@@ -168,4 +177,27 @@ header h1 {
     max-height: 550px;
     margin: 0 auto;
     padding: 25px;
+}
+.band-background {
+    background-image: url('../img/band-background.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.band-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.band-member {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(186,50,50,0.8);
+    color: rgba(255, 255, 255, 1);
+    margin: 50px;
+    text-align: center;
+}
+.on-stage {
+    font-size: 2em;
+    text-align: center;
 }
