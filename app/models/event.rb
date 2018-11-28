@@ -40,18 +40,15 @@ class Event
     def self.create(opts)
         results = DB.exec(
             <<-SQL
-                INSERT INTO events (location, venue, price, venue_contact, event_day)
-                VALUES ( '#{opts["location"]}', '#{opts["venue"]}', #{opts["price"]}, '#{opts["event"]}' '#{opts["venue_contact"]}', '#{opts["event_day"]}', '#{opts["duration"]}' )
-                RETURNING id, location, venue, price, venue_contact, event_day, duration;
+                INSERT INTO events (location, venue, event_day, duration)
+                VALUES ( '#{opts["location"]}', '#{opts["venue"]}', '#{opts["event_day"]}', '#{opts["duration"]}' )
+                RETURNING id, location, venue, event_day, duration;
             SQL
         )
         return {
             "id" => results.first["id"].to_i,
             "location" => results.first["location"],
             "venue" => results.first["venue"],
-            "price" => results.first["price"].to_i,
-            "event" => results.first["event"],
-            "venue_contact" => results.first["venue_contact"],
             "event_day" => results.first["event_day"],
             "duration" => results.first["duration"],
         }

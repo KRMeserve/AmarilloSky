@@ -4,6 +4,7 @@ class HomePage extends React.Component{
         this.changeDisplay = this.changeDisplay.bind(this);
         this.state = {
             displayLandingPage: true,
+            displayEventsForm: false,
             displayHomePage: false,
             displayEventsPage: false,
             displayAboutPage: false,

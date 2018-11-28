@@ -15,10 +15,11 @@ class EventsList extends React.Component {
                             <p><span class="bold on-stage">{event.event_day}</span></p>
                             {/* <p><span class="bold">{event.location}</span> - For more info, contact {event.venue_contact}</p> */}
                             <p class="on-stage"><span class="bold">{event.duration}</span></p>
+                            <button onClick={()=>{this.props.deleteEvent(event, event.id)}}>Delete Event</button>
                         </div>
                     )
                 })}
-                <button class="input-button">Add an Event</button>
+                <button class="input-button" onClick={()=>{this.props.changeDisplay('displayEventsForm', 'displayEventsPage')}}>Add an Event</button>
             </div>
         )
     }
