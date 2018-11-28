@@ -51,7 +51,7 @@ class HomePage extends React.Component{
                 }
                 {this.state.displayEventsPage
                     ?
-                    <Events changeDisplay={this.changeDisplay}></Events>
+                    <Events changeDisplay={this.changeDisplay} now={this.state.now}></Events>
                     :
                     ''
                 }

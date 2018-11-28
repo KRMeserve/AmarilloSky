@@ -201,3 +201,12 @@ header h1 {
     font-size: 2em;
     text-align: center;
 }
+.event {
+    text-align: center;
+}
+.pastArticle {
+    background-color: white;
+    color: rgb(186,50,50);
+    max-width: 500px;
+    margin: 25px auto; 
+}

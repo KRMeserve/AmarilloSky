@@ -103,7 +103,7 @@ class Events extends React.Component{
                 <main>
                     {this.state.displayEventsPage
                         ?
-                        <EventsList deleteEvent={this.deleteEvent} eventSubmit={this.eventUpdateSubmit} changeDisplay={this.toggleViews} events={this.state.events} getEvent={this.getEvent}></EventsList>
+                        <EventsList now={this.props.now} deleteEvent={this.deleteEvent} eventSubmit={this.eventUpdateSubmit} changeDisplay={this.toggleViews} events={this.state.events} getEvent={this.getEvent}></EventsList>
                         :
                         ''
                     }
