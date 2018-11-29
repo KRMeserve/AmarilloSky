@@ -14,7 +14,7 @@ class EventsList extends React.Component {
     render(){
         return(
             <div className="events-container">
-                <h1 class="title">Upcoming Events</h1>
+                <h1 class="title underline">Upcoming Events</h1>
                 {this.props.events.slice(0).reverse().map((event, index) =>{
                     return(
                         <div>
@@ -33,7 +33,7 @@ class EventsList extends React.Component {
                         </div>
                     )
                 })}
-                <h1 class="title">Past Events</h1>
+                <h1 class="title underline">Past Events</h1>
                 {this.props.events.slice(0).reverse().map((event, index) => {
                     return(
                         <div>
@@ -52,7 +52,7 @@ class EventsList extends React.Component {
                         </div>
                     )
                 })}
-                <button class="input-button" onClick={()=>{this.props.changeDisplay('displayEventsForm', 'displayEventsPage')}}>Add an Event</button>
+                <button class="input-button botPadding30" onClick={()=>{this.props.changeDisplay('displayEventsForm', 'displayEventsPage')}}>Add an Event</button>
             </div>
         )
     }

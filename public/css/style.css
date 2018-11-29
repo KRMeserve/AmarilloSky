@@ -134,7 +134,7 @@ header h1 {
 }
 .landing-page-h1 {
     display: inline-block;
-    margin-top: 500px;
+    margin-top: 50vh;
     text-align: center;
     color: black;
     width: 100%;
@@ -179,7 +179,7 @@ header h1 {
 }
 .carousel {
     display: block;
-    width: 80%;
+    max-width: 900px;
     max-height: 550px;
     margin: 0 auto;
     padding: 25px;
@@ -219,4 +219,10 @@ header h1 {
     color: rgb(186,50,50);
     max-width: 500px;
     margin: 25px auto;
+}
+.botPadding30 {
+    padding-bottom: 30px;
+}
+.underline {
+    text-decoration: underline;
 }
