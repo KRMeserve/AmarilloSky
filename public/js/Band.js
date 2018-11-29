@@ -1,4 +1,38 @@
 class Band extends React.Component{
+    constructor(props){
+        super(props);
+        this.getMembers = this.getMembers.bind(this);
+        this.getMember = this.getMember.bind(this);
+        this.toggleMemberViews = this.toggleMemberViews.bind(this);
+        this.state = {
+            members: [],
+            member: {},
+            displayMember: false,
+            displayMembers: true,
+        }
+    }
+    componentDidMount(){
+        this.getMembers();
+    }
+    getMembers(){
+        fetch('/members').then(response => response.json()).then(data =>{
+            this.setState({
+                members: data
+            })
+        })
+    }
+    getMember(member){
+        console.log(member);
+        this.setState({
+            member: member
+        })
+    }
+    toggleMemberViews(view1, view2) {
+        this.setState({
+            [view1]: !this.state[view1],
+            [view2]: !this.state[view2]
+        })
+    }
     render(){
         return(
             <div>
@@ -13,32 +47,18 @@ class Band extends React.Component{
                     </nav>
                 </header>
                 <main class="band-background">
-                    <div class="band-container">
-                        <div class='band-member'>
-                            <h1>Tanner "The Voice" Smale</h1>
-                            <h1>Lead Vocals</h1>
-                            <img src="/img/tanner.png"></img>
-                            <p>Click for more info!</p>
-                        </div>
-                        <div class='band-member'>
-                            <h1>Rob "Thunder" Harrier</h1>
-                            <h1>Bass/Backup Vocals</h1>
-                            <img src="/img/rob.png"></img>
-                            <p>Click for more info!</p>
-                        </div>
-                        <div class='band-member'>
-                            <h1>Jerry "The Animal" Smith</h1>
-                            <h1>Drums/Backup Vocals</h1>
-                            <img src="/img/jerry.png"></img>
-                            <p>Click for more info!</p>
-                        </div>
-                        <div class='band-member'>
-                            <h1>Adam "The Magnet" Sarna</h1>
-                            <h1>Guitar</h1>
-                            <img src="/img/adam.png"></img>
-                            <p>Click for more info!</p>
-                        </div>
-                    </div>
+                    {this.state.displayMembers
+                        ?
+                        <MemberList toggleMemberViews={this.toggleMemberViews} members={this.state.members} getMember={this.getMember}></MemberList>
+                        :
+                        ''
+                    }
+                    {this.state.displayMember
+                        ?
+                        <Member toggleMemberViews={this.toggleMemberViews} member={this.state.member}></Member>
+                        :
+                        ''
+                    }
                 </main>
             </div>
         )

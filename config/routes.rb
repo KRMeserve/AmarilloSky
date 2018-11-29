@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   put '/events/:id', to: 'events#update'
 
+  get '/members', to: 'members#index'
+
+  get '/members/:id', to: 'members#show'
+
 end

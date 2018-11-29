@@ -221,6 +221,11 @@ header h1 {
     max-width: 500px;
     margin: 25px auto;
 }
+/* .pastEvents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} */
 .botMargin30 {
     margin-bottom: 30px;
 }
@@ -232,4 +237,30 @@ header h1 {
     background-color: rgb(36,39,46);
     margin: 25px auto;
     padding-bottom: 25px;
+}
+.band-member-show {
+    width: 90%;
+    background-color: rgba(186,50,50,0.8);
+    color: rgba(255, 255, 255, 1);
+    margin: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.band-member-inner-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+}
+.band-member-inner-div img {
+    width: 500px;
+    height: 500px;
+}
+.band-member-inner-div p {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
