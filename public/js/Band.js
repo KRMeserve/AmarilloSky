@@ -17,22 +17,26 @@ class Band extends React.Component{
                         <div class='band-member'>
                             <h1>Tanner "The Voice" Smale</h1>
                             <h1>Lead Vocals</h1>
-                            <p>Picture will go here.</p>
+                            <img src="/img/tanner.png"></img>
+                            <p>Click for more info!</p>
                         </div>
                         <div class='band-member'>
                             <h1>Rob "Thunder" Harrier</h1>
                             <h1>Bass/Backup Vocals</h1>
-                            <p>Picture will go here.</p>
+                            <img src="/img/rob.png"></img>
+                            <p>Click for more info!</p>
                         </div>
                         <div class='band-member'>
                             <h1>Jerry "The Animal" Smith</h1>
                             <h1>Drums/Backup Vocals</h1>
-                            <p>Picture will go here.</p>
+                            <img src="/img/jerry.png"></img>
+                            <p>Click for more info!</p>
                         </div>
                         <div class='band-member'>
                             <h1>Adam "The Magnet" Sarna</h1>
                             <h1>Guitar</h1>
-                            <p>Picture will go here.</p>
+                            <img src="/img/adam.png"></img>
+                            <p>Click for more info!</p>
                         </div>
                     </div>
                 </main>

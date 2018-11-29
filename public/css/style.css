@@ -103,6 +103,12 @@ header h1 {
     padding-top: 25px;
     margin-top: 0;
 }
+.pastTitle {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 25px;
+    margin-top: 0;
+}
 .bold {
     font-weight: 700;
 }
@@ -197,6 +203,10 @@ header h1 {
     margin: 50px;
     text-align: center;
 }
+.band-member img {
+    width: 300px;
+    height: 300px;
+}
 .on-stage {
     font-size: 2em;
     text-align: center;
@@ -208,5 +218,5 @@ header h1 {
     background-color: white;
     color: rgb(186,50,50);
     max-width: 500px;
-    margin: 25px auto; 
+    margin: 25px auto;
 }
