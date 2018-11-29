@@ -35,7 +35,7 @@ class About extends React.Component{
                             this.state.showInputList
                             ?
                             <div class="article">
-                                <InputList></InputList>
+                                <InputList toggleInputList={this.toggleInputList}></InputList>
                             </div>
                             :
                             ''

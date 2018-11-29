@@ -16,7 +16,7 @@ class Contact extends React.Component{
                     <div class="article-container">
                         <div class="article">
                             <h1 class="title">Contact Us</h1>
-                            <a href="mailto:s.harrier@comcast.net?Subject=Book%20Amarillo%20Sky"><button class="input-button">Book Amarillo Sky</button></a>
+                            <a href="mailto:s.harrier@comcast.net?Subject=Book%20Amarillo%20Sky"><button class="input-button botMargin30">Book Amarillo Sky</button></a>
                             <p>Contacting us through the above button is preferred. You may also call our manager at 574-524-0742 or send us a message on <a href="https://www.facebook.com/AmarilloSkyBand/"> FaceBook </a> to inquire about anything band-related. </p>
                         </div>
                         <div class="article">

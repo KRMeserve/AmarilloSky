@@ -163,11 +163,12 @@ header h1 {
     font-size: 1em;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(252,184,80);
+    background-color: rgb(154,136,111);
     transition: .3s;
 }
 .input-button:hover {
-    background-color: rgb(140, 125, 174);
+    background-color: rgb(186,50,50);
+    color: white;
     cursor: pointer;
 }
 #logo {
@@ -220,9 +221,15 @@ header h1 {
     max-width: 500px;
     margin: 25px auto;
 }
-.botPadding30 {
-    padding-bottom: 30px;
+.botMargin30 {
+    margin-bottom: 30px;
 }
 .underline {
     text-decoration: underline;
+}
+.upcomingEvents {
+    width: 80%;
+    background-color: rgb(36,39,46);
+    margin: 25px auto;
+    padding-bottom: 25px;
 }
