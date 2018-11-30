@@ -39,8 +39,10 @@ class HomePage extends React.Component{
                         </header>
                         <main>
                             <div className="homepage-background">
+                                <img class="logo" src="/img/logo-skinny.png"></img>
+                                <UpcomingEvent now={this.state.now} changeDisplay={this.changeDisplay}></UpcomingEvent>
                                 <div>
-                                    <Carousel></Carousel>
+                                    <Carousel changeDisplay={this.changeDisplay}></Carousel>
                                 </div>
                                 {/* <div className="fb-page" data-href="https://www.facebook.com/AmarilloSkyBand/" data-tabs="timeline" data-height="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AmarilloSkyBand/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AmarilloSkyBand/">Amarillo Sky</a></blockquote></div> */}
                             </div>

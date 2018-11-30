@@ -9,7 +9,7 @@ class MemberList extends React.Component {
                             <h1>{member.name}</h1>
                             <h1>{member.instrument}</h1>
                             <img src={member.img}></img>
-                            <p onClick={()=>{this.props.getMember(member); this.props.toggleMemberViews('displayMember', 'displayMembers')}}>Click here for more info!</p>
+                            <p class="member-list-click" onClick={()=>{this.props.getMember(member); this.props.toggleMemberViews('displayMember', 'displayMembers')}}>Click here for more info!</p>
                         </div>
                     )
                 })}
