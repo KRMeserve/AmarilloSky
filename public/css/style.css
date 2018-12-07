@@ -123,7 +123,7 @@ header h1 {
 }
 /* End of Keyframes  */
 .landing-page-background {
-    background: url('../img/landing-background2.png');
+    background: url('../img/landing-background3.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -134,7 +134,7 @@ header h1 {
 }
 .landing-page-h1 {
     display: inline-block;
-    margin-top: 50vh;
+    margin-top: 60vh;
     text-align: center;
     color: black;
     width: 100%;
@@ -181,7 +181,7 @@ header h1 {
 .carousel {
     display: block;
     max-width: 900px;
-    max-height: 550px;
+    max-height: 475px;
     margin: 10px auto 30px;
     padding: 25px;
     background-color: rgba(186,50,50,0.8);
@@ -278,6 +278,7 @@ header h1 {
 .logo {
     width: 99.5%;
     border: 2px solid rgba(186,50,50,0.8);
+    max-height: 250px;
 }
 .home-page-buttons {
     /* display: flex;
@@ -288,4 +289,7 @@ header h1 {
     margin: 0;
     align-self: center;
     width: 30%;
+}
+.botPadding15 {
+    padding-bottom: 15px;
 }

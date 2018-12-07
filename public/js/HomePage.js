@@ -10,6 +10,7 @@ class HomePage extends React.Component{
             displayAboutPage: false,
             displayBandPage: false,
             displayContactPage: false,
+            isAdmin: false,
             now: now
         }
     };
@@ -53,7 +54,7 @@ class HomePage extends React.Component{
                 }
                 {this.state.displayEventsPage
                     ?
-                    <Events changeDisplay={this.changeDisplay} now={this.state.now}></Events>
+                    <Events changeDisplay={this.changeDisplay} now={this.state.now} isAdmin={this.state.isAdmin}></Events>
                     :
                     ''
                 }

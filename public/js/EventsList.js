@@ -25,8 +25,15 @@ class EventsList extends React.Component {
                                         <h2 class="title">{event.venue} at <span class="italic">{event.location}</span></h2>
                                         <p><span class="bold on-stage">{event.event_day}</span></p>
                                         <p class="on-stage"><span class="bold">{event.duration}</span></p>
-                                        <button onClick={()=>{this.props.changeDisplay('displayEventsFormUpdate', 'displayEventsPage'); this.props.getEvent(event);}}>Edit Event</button>
-                                        <button onClick={()=>{this.props.deleteEvent(event, event.id)}}>Delete Event</button>
+                                        {this.props.isAdmin
+                                            ?
+                                            <div>
+                                                <button onClick={()=>{this.props.changeDisplay('displayEventsFormUpdate', 'displayEventsPage'); this.props.getEvent(event);}}>Edit Event</button>
+                                                <button onClick={()=>{this.props.deleteEvent(event, event.id)}}>Delete Event</button>
+                                            </div>
+                                            :
+                                            ''
+                                        }
                                     </div>
                                     :
                                     ''
@@ -47,16 +54,28 @@ class EventsList extends React.Component {
                                     <div className="event pastArticle">
                                         <h2 class="pastTitle">{event.venue} at <span class="italic">{event.location}</span></h2>
                                         <p><span class="on-stage">{event.event_day}</span></p>
-                                        <p class="on-stage"><span class="bold">{event.duration}</span></p>
-                                        <button onClick={()=>{this.props.changeDisplay('displayEventsFormUpdate', 'displayEventsPage'); this.props.getEvent(event);}}>Edit Event</button>
-                                        <button onClick={()=>{this.props.deleteEvent(event, event.id)}}>Delete Event</button>
+                                        <p class="on-stage botPadding15"><span class="bold">{event.duration}</span></p>
+                                        {this.props.isAdmin
+                                            ?
+                                            <div>
+                                                <button onClick={()=>{this.props.changeDisplay('displayEventsFormUpdate', 'displayEventsPage'); this.props.getEvent(event);}}>Edit Event</button>
+                                                <button onClick={()=>{this.props.deleteEvent(event, event.id)}}>Delete Event</button>
+                                            </div>
+                                            :
+                                            ''
+                                        }
                                     </div>
                                 }
                             </div>
                         )
                     })}
                 </div>
-                <button class="input-button botMargin30" onClick={()=>{this.props.changeDisplay('displayEventsForm', 'displayEventsPage')}}>Add an Event</button>
+                {this.props.isAdmin
+                    ?
+                    <button class="input-button botMargin30" onClick={()=>{this.props.changeDisplay('displayEventsForm', 'displayEventsPage')}}>Add an Event</button>
+                    :
+                    ''
+                }
             </div>
         )
     }
