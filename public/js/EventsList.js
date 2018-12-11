@@ -43,8 +43,8 @@ class EventsList extends React.Component {
                         )
                     })}
                 </div>
-                <h1 class="title underline">Past Events</h1>
                 <div class="pastEvents">
+                    <h1 class="title underline">Past Events</h1>
                     {this.props.events.slice(0).reverse().map((event, index) => {
                         return(
                             <div>
