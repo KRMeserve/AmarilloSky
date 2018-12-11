@@ -23,7 +23,7 @@ class EventsList extends React.Component {
                                     ?
                                     <div className="event article">
                                         <h2 class="title">{event.venue}</h2>
-                                        <h2><span class="italic">{event.location}</span></h2>
+                                        <h2><span class="italic title">{event.location}</span></h2>
                                         <p><span class="bold on-stage">{event.event_day}</span></p>
                                         <p class="on-stage"><span class="bold">{event.duration}</span></p>
                                         {this.props.isAdmin
@@ -53,7 +53,8 @@ class EventsList extends React.Component {
                                     ''
                                     :
                                     <div className="event pastArticle">
-                                        <h2 class="pastTitle">{event.venue} at <span class="italic">{event.location}</span></h2>
+                                        <h2 class="pastTitle">{event.venue}</h2>
+                                        <h2><span class="italic">{event.location}</span></h2>
                                         <p><span class="on-stage">{event.event_day}</span></p>
                                         <p class="on-stage botPadding15"><span class="bold">{event.duration}</span></p>
                                         {this.props.isAdmin

@@ -25,7 +25,7 @@ class Contact extends React.Component{
                         </div>
                         <div class="article">
                             <h1 class="title">Equipment</h1>
-                            <p>Amarillo Sky has a full PA system, stage lights and a light show. You can find the Input List on the "About Us" page.</p>
+                            <p>Amarillo Sky has a full PA system, stage lights, and a light show. You can find the Input List on the "About Us" page.</p>
                         </div>
                     </div>
                 </main>
