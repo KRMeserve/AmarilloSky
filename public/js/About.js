@@ -43,7 +43,7 @@ class About extends React.Component{
                         }
                         <div class="article">
                             <h1 class="title">Set List</h1>
-                            <p>They are continually learning new country hits to add to our set lists. They have some songs that are particularly geared towards weddings that they can email you. Here are some of the songs they currently perform.</p>
+                            <p>They are continually learning new country hits to add to their set lists. They have some songs that are particularly geared towards weddings that they can email you. Here are some of the songs they currently perform.</p>
                             <ul>
                                 <li><span class="bold">Body Like a Back Road</span> - Sam Hunt</li>
                                 <li><span class="bold">Seeing Red</span> - Dustin Lynch</li>
