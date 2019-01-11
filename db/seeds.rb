@@ -61,4 +61,6 @@ INSERT INTO events (location, venue, venue_contact, event_day, duration) VALUES 
 INSERT INTO events (location, venue, venue_contact, event_day, duration) VALUES ('Rusty Spur', 'Fort Wayne, IN', '260-755-3465', 'Friday, November 30, 2018', '9:30pm-1:30am');
 INSERT INTO events (location, venue, venue_contact, event_day, duration) VALUES ('Rusty Spur', 'Fort Wayne, IN', '260-755-3465', 'Saturday, December 1, 2018', '9:30pm-1:30am');
 INSERT INTO events (location, venue, venue_contact, event_day, duration) VALUES ('Silver Inn', 'Silver Lake, IN', '260-352-2870', 'Monday, December 31, 2018', '9:00pm-1:00am');
+INSERT INTO events (location, venue, event_day, duration) VALUES ('The Rusty Spur', 'Fort Wayne, IN', 'Saturday, April 27, 2019', '9:30pm-1:30am');
+INSERT INTO events (location, venue, event_day, duration) VALUES ('Summer Dance Elkhart Downtown Civic Plaza', 'Elkhart, IN', 'Saturday, August 17, 2019', '8:00pm-10:00pm');
 SELECT * FROM events;
