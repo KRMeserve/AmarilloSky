@@ -36,6 +36,7 @@ class HomePage extends React.Component{
                                 <a href="#" onClick={()=>{ this.changeDisplay('displayHomePage', 'displayBandPage')}}>Band</a>
                                 <a href="#" onClick={()=>{ this.changeDisplay('displayHomePage', 'displayAboutPage')}}>About Us</a>
                                 <a href="#" onClick={()=>{ this.changeDisplay('displayHomePage', 'displayContactPage')}}>Contact Us</a>
+                                <a href="https://www.youtube.com/watch?v=YQkCyGdp0Sw&feature=youtu.be">Live Compilation</a>
                             </nav>
                         </header>
                         <main>
