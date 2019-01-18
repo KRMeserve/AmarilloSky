@@ -10,6 +10,7 @@ class Contact extends React.Component{
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayBandPage', 'displayContactPage')}}>Band</a>
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayAboutPage', 'displayContactPage')}}>About Us</a>
                         <a href="#">Contact Us</a>
+                        <a href="https://www.youtube.com/watch?v=YQkCyGdp0Sw&feature=youtu.be">Live Compilation</a>
                     </nav>
                 </header>
                 <main class="contacts-page">

@@ -44,6 +44,7 @@ class Band extends React.Component{
                         <a href="#">Band</a>
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayAboutPage', 'displayBandPage')}}>About Us</a>
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayContactPage', 'displayBandPage')}}>Contact Us</a>
+                        <a href="https://www.youtube.com/watch?v=YQkCyGdp0Sw&feature=youtu.be">Live Compilation</a>
                     </nav>
                 </header>
                 <main class="band-background">

@@ -22,6 +22,7 @@ class About extends React.Component{
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayBandPage', 'displayAboutPage')}}>Band</a>
                         <a href="#">About Us</a>
                         <a href="#" onClick={()=>{ this.props.changeDisplay('displayContactPage', 'displayAboutPage')}}>Contact Us</a>
+                        <a href="https://www.youtube.com/watch?v=YQkCyGdp0Sw&feature=youtu.be">Live Compilation</a>
                     </nav>
                 </header>
                 <main class="about-page">
