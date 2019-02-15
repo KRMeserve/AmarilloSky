@@ -2,24 +2,35 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.changeDisplay = this.changeDisplay.bind(this);
+        this.testUser = this.testUser.bind(this);
         this.state = {
             displayLandingPage: true,
             displayEventsForm: false,
             displayHomePage: false,
             displayEventsPage: false,
+            displayEventsAdminPage: false,
             displayAboutPage: false,
             displayBandPage: false,
             displayContactPage: false,
+            displayLoginPage: false,
             isAdmin: false,
             now: now
         }
     };
+    testUser(username, password){
+      fetch('/users/1').then(response => response.json()).then(data =>{
+        if (data.username === username && data.password === password) {
+          this.setState({
+            isAdmin: true
+          })
+        }
+      })
+    }
     changeDisplay(dis1, dis2) {
         this.setState({
             [dis1]: !this.state[dis1],
             [dis2]: !this.state[dis2]
         })
-        console.log(this.state.now);
     }
     render(){
         return(
@@ -76,6 +87,12 @@ class HomePage extends React.Component{
                     <Contact changeDisplay={this.changeDisplay}></Contact>
                     :
                     ''
+                }
+                {this.state.displayLoginPage
+                  ?
+                  <LoginPage changeDisplay={this.changeDisplay} testUser={this.testUser}></LoginPage>
+                  :
+                  ''
                 }
                 <Footer></Footer>
             </div>

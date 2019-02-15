@@ -13,11 +13,18 @@ class Events extends React.Component{
             event: {},
             displayEventsForm: false,
             displayEventsPage: true,
+            displayEventsAdminPage: false,
             displayEventsFormUpdate: false,
         }
     }
     componentDidMount(){
         this.getEvents();
+        if (this.props.isAdmin === true) {
+          this.setState({
+            displayEventsPage: false,
+            displayEventsAdminPage: true,
+          })
+        }
     }
     getEvents(){
         fetch('/events').then(response => response.json()).then(data =>{
@@ -82,6 +89,16 @@ class Events extends React.Component{
     }
     toggleViews(view1, view2) {
         console.log('running toggleviews');
+        console.log(this.props.isAdmin);
+        if (this.props.isAdmin === true) {
+          if (view1 === 'displayEventsPage') {
+            console.log('changed to admin page');
+            view1 = 'displayEventsAdminPage'
+          } else if (view2 === 'displayEventsPage') {
+            console.log('changed to admin page');
+            view2 = 'displayEventsAdminPage'
+          }
+        }
         this.setState({
             [view1]: !this.state[view1],
             [view2]: !this.state[view2]
@@ -105,6 +122,12 @@ class Events extends React.Component{
                     {this.state.displayEventsPage
                         ?
                         <EventsList now={this.props.now} deleteEvent={this.deleteEvent} eventSubmit={this.eventUpdateSubmit} changeDisplay={this.toggleViews} events={this.state.events} getEvent={this.getEvent}></EventsList>
+                        :
+                        ''
+                    }
+                    {this.state.displayEventsAdminPage
+                        ?
+                        <EventsListAdmin now={this.props.now} deleteEvent={this.deleteEvent} eventSubmit={this.eventUpdateSubmit} changeDisplay={this.toggleViews} events={this.state.events} getEvent={this.getEvent}></EventsListAdmin>
                         :
                         ''
                     }
