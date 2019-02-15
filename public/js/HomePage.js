@@ -5,11 +5,11 @@ class HomePage extends React.Component{
         this.getUsers = this.getUsers.bind(this);
         this.testUser = this.testUser.bind(this);
         this.state = {
-            users: [],
             displayLandingPage: true,
             displayEventsForm: false,
             displayHomePage: false,
             displayEventsPage: false,
+            displayEventsAdminPage: false,
             displayAboutPage: false,
             displayBandPage: false,
             displayContactPage: false,
@@ -21,20 +21,13 @@ class HomePage extends React.Component{
     componentDidMount(){
       this.getUsers()
     }
-    getUsers(){
-      fetch('/users').then(response => response.json()).then(data =>{
-        console.log(data);
-          this.setState({
-              users: data
-          })
-      })
-    }
-    testUser(username){
+    testUser(username, password){
       fetch('/users/1').then(response => response.json()).then(data =>{
-        console.log(data);
-        this.setState({
-          isAdmin: true
-        })
+        if (data.username === username && data.password === password) {
+          this.setState({
+            isAdmin: true
+          })
+        }
       })
     }
     changeDisplay(dis1, dis2) {
@@ -42,7 +35,6 @@ class HomePage extends React.Component{
             [dis1]: !this.state[dis1],
             [dis2]: !this.state[dis2]
         })
-        console.log(this.state.now);
     }
     render(){
         return(

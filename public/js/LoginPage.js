@@ -20,7 +20,7 @@ class LoginPage extends React.Component{
     return(
       <div class="article">
           <h1 class="title">Enter Login Information:</h1>
-          <form onSubmit={(event)=>{this.handleSubmit(event); this.props.changeDisplay('displayLoginPage', 'displayHomePage'); this.props.testUser(this.state.username)}}>
+          <form onSubmit={(event)=>{this.handleSubmit(event); this.props.changeDisplay('displayLoginPage', 'displayHomePage'); this.props.testUser(this.state.username, this.state.password)}}>
               <label>Username:</label><br/>
               <input onChange={this.handleChange} id="username" type="text" value={this.state.username}></input><br/>
               <label>Password:</label><br/>
