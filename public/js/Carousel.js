@@ -32,7 +32,7 @@ class Carousel extends React.Component {
             <div>
                 <img src={this.state.visiblePicture} class="carousel"></img>
                 <div class="article event">
-                    <p><span class="bold">Amarillo Sky</span> is a modern country cover band based in the Michiana area.</p>
+                    <p><span class="bold">Amarillo Sky</span> is a modern country cover band based in the Michiana area<span onClick={()=>{this.props.changeDisplay('displayHomePage', 'displayLoginPage')}}>.</span></p>
                     <div class="home-page-buttons">
                         <button class="input-button botMargin30" onClick={()=>{this.props.changeDisplay('displayHomePage', 'displayAboutPage')}}>Read More About Us</button>
                         <button class="input-button" onClick={()=>{this.props.changeDisplay('displayHomePage', 'displayContactPage')}}>Book Amarillo Sky</button>
