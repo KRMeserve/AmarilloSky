@@ -2,7 +2,6 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.changeDisplay = this.changeDisplay.bind(this);
-        this.getUsers = this.getUsers.bind(this);
         this.testUser = this.testUser.bind(this);
         this.state = {
             displayLandingPage: true,
@@ -18,9 +17,6 @@ class HomePage extends React.Component{
             now: now
         }
     };
-    componentDidMount(){
-      this.getUsers()
-    }
     testUser(username, password){
       fetch('/users/1').then(response => response.json()).then(data =>{
         if (data.username === username && data.password === password) {
