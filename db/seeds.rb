@@ -8,7 +8,6 @@
 
 
 CREATE TABLE users (id SERIAL, username VARCHAR(20), password VARCHAR(100), admin BOOLEAN);
-INSERT INTO users (username, password, admin) VALUES ('s.harrier', 'MandySue', true);
 SELECT * FROM users;
 
 CREATE TABLE members (id SERIAL, name VARCHAR(30), instrument VARCHAR(25), img VARCHAR(50), bio TEXT);
