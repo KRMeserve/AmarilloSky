@@ -85,11 +85,14 @@ class Events extends React.Component{
         })
     }
     deleteEvent(event, id){
+      let input = prompt("Are you sure you want to delete this event?", "Yes or No");
+      if (input.toLowerCase() == 'yes') {
         fetch('/events/' + id, {
             method: 'DELETE'
         }).then(response => {
             this.getEvents()
         })
+      } 
     }
     toggleViews(view1, view2) {
         console.log('running toggleviews');
