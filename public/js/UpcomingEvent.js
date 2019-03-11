@@ -13,6 +13,9 @@ class UpcomingEvent extends React.Component{
     }
     getEventsAndFindRecent(){
         fetch('/events').then(response => response.json()).then(data =>{
+          data.sort(function(a,b){
+            return new Date(b.event_day) - new Date(a.event_day);
+          }).reverse();
             this.setState({
                 events: data
             })

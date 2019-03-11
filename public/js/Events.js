@@ -28,6 +28,10 @@ class Events extends React.Component{
     }
     getEvents(){
         fetch('/events').then(response => response.json()).then(data =>{
+            // Turning each string into a Date object and sorting by order. Then reverse the array to make it ascending order.
+            data.sort(function(a,b){
+              return new Date(b.event_day) - new Date(a.event_day);
+            }).reverse();
             this.setState({
                 events: data
             })
