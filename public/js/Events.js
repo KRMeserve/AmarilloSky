@@ -48,7 +48,6 @@ class Events extends React.Component{
         })
     }
     eventCreateSubmit(event){
-        console.log(this);
         fetch('/events', {
             body: JSON.stringify(event),
             method: 'POST',
@@ -60,13 +59,11 @@ class Events extends React.Component{
             return createdEvent.json()
         }).then(jsonedEvent => {
             this.eventCreate(jsonedEvent)
-            console.log(this);
             this.toggleViews('displayEventsForm', 'displayEventsPage')
             this.getEvents()
         })
     }
     eventUpdateSubmit(event){
-        console.log(this);
         fetch('/events/' + event.id, {
             body: JSON.stringify(event),
             method: 'PUT',
@@ -75,11 +72,8 @@ class Events extends React.Component{
                 'Content-Type': 'application/json'
             }
         }).then(updatedEvent => {
-            console.log(updatedEvent, 'updated event');
             return updatedEvent.json()
         }).then(jsonedEvent => {
-            console.log(jsonedEvent, 'JSONed event');
-            console.log(this);
             this.toggleViews('displayEventsFormUpdate', 'displayEventsPage')
             this.getEvents()
         })
@@ -92,17 +86,13 @@ class Events extends React.Component{
         }).then(response => {
             this.getEvents()
         })
-      } 
+      }
     }
     toggleViews(view1, view2) {
-        console.log('running toggleviews');
-        console.log(this.props.isAdmin);
         if (this.props.isAdmin === true) {
           if (view1 === 'displayEventsPage') {
-            console.log('changed to admin page');
             view1 = 'displayEventsAdminPage'
           } else if (view2 === 'displayEventsPage') {
-            console.log('changed to admin page');
             view2 = 'displayEventsAdminPage'
           }
         }

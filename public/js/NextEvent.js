@@ -13,20 +13,15 @@ class NextEvent extends React.Component{
     }
     getClosestEvent(props){
         let recentEvents = [];
-        console.log('running getClosestEvent');
-        console.log(props.events, 'this.props.events');
         for (let i = 0; i < props.events.length; i++) {
-            console.log(props.events[i].event_day);
             if (moment(props.events[i].event_day).isSameOrAfter(props.now, 'day')) {
                 recentEvents.push(props.events[i]);
             }
         }
-        console.log(recentEvents, 'recent events');
         this.setState({
             event: recentEvents[0],
             receivedEvents: true
         })
-        console.log(recentEvents[0], 'recentEvents[0]');
     }
     render(){
         return(

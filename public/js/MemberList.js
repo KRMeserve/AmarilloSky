@@ -3,7 +3,6 @@ class MemberList extends React.Component {
         return(
             <div class="band-container">
                 {this.props.members.map((member, index)=>{
-                    console.log(member);
                     return(
                         <div class='band-member'>
                             <h1>{member.name}</h1>

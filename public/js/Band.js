@@ -22,7 +22,6 @@ class Band extends React.Component{
         })
     }
     getMember(member){
-        console.log(member);
         this.setState({
             member: member
         })
