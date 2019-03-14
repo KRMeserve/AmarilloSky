@@ -37,11 +37,11 @@ class HomePage extends React.Component{
           cache: "no-cache",
           credentials: "same-origin",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
           },
           redirect: "follow",
           referrer: "no-referrer",
-          body: data,
+          body: JSON.stringify(data),
         }).then(response => response.json());
       };
       //Calling above function
