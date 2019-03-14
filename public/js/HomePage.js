@@ -29,11 +29,8 @@ class HomePage extends React.Component{
       //   }
       // })
       const fetchURL = `https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`;
-    // const fetchURL = `http://localhost:4000/users?username=${this.state.username}&password=${this.state.password}`;
     //Function that will send the POST request to the server.
     const logInToAccount = (url = '' , data = {})=>{
-      console.log(fetchURL);
-      console.log(data);
       return fetch(url, {
         method: "POST",
         mode: "no-cors",
@@ -60,7 +57,6 @@ class HomePage extends React.Component{
         } else {
           console.log('username or password incorrect');
         }
-
       })
       .catch(error => console.log(error));
     }
