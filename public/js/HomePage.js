@@ -45,7 +45,7 @@ class HomePage extends React.Component{
         }).then(response => response.json());
       };
       //Calling above function
-      logInToAccount(fetchURL, {username: username, password: password})
+      logInToAccount(fetchURL, {"username": username, "password": password})
         .then(data => {
           let passwordResponse = JSON.stringify(data);
           console.log(passwordResponse);
