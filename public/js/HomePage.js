@@ -29,36 +29,36 @@ class HomePage extends React.Component{
       //   }
       // })
       const fetchURL = `https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`;
-    //Function that will send the POST request to the server.
-    const logInToAccount = (url = '' , data = {})=>{
-      return fetch(url, {
-        method: "POST",
-        mode: "no-cors",
-        cache: "no-cache",
-        credentials: "same-origin",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-        referrer: "no-referrer",
-        body: JSON.stringify(data),
-      }).then(response => response.json());
-    }
-    //Calling above function
-    logInToAccount(fetchURL, {username: username, password: password})
-      .then(data => {
-        let passwordResponse = JSON.stringify(data);
-        console.log(passwordResponse);
-        if (passwordResponse === "\"passwords match\"" && username === "s.harrier") {
-          console.log('password correct, state updated');
-          this.setState({
-            isAdmin: true
-          })
-        } else {
-          console.log('username or password incorrect');
-        }
-      })
-      .catch(error => console.log(error));
+      //Function that will send the POST request to the server.
+      const logInToAccount = (url = '' , data = {})=>{
+        return fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          cache: "no-cache",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          redirect: "follow",
+          referrer: "no-referrer",
+          body: JSON.stringify(data),
+        }).then(response => response.json());
+      };
+      //Calling above function
+      logInToAccount(fetchURL, {username: username, password: password})
+        .then(data => {
+          let passwordResponse = JSON.stringify(data);
+          console.log(passwordResponse);
+          if (passwordResponse === "\"passwords match\"" && username === "s.harrier") {
+            console.log('password correct, state updated');
+            this.setState({
+              isAdmin: true
+            })
+          } else {
+            console.log('username or password incorrect');
+          }
+        })
+        .catch(error => console.log(error));
     }
     changeDisplay(dis1, dis2) {
         this.setState({
