@@ -18,16 +18,51 @@ class HomePage extends React.Component{
         }
     };
     testUser(username, password){
-      fetch(`https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`).then(response => response.json()).then(data =>{
-        console.log(data, 'data');
-        const passwordResponse = JSON.stringify(data);
-        console.log(passwordResponse, 'passwordResponse');
-        if (passwordResponse === "\"passwords match\"") {
+      // fetch(`https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`).then(response => response.json()).then(data =>{
+      //   console.log(data, 'data');
+      //   const passwordResponse = JSON.stringify(data);
+      //   console.log(passwordResponse, 'passwordResponse');
+      //   if (passwordResponse === "\"passwords match\"") {
+      //     this.setState({
+      //       isAdmin: true
+      //     })
+      //   }
+      // })
+      const fetchURL = `https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`;
+    // const fetchURL = `http://localhost:4000/users?username=${this.state.username}&password=${this.state.password}`;
+    //Function that will send the POST request to the server.
+    const logInToAccount = (url = '' , data = {})=>{
+      console.log(fetchURL);
+      console.log(data);
+      return fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        referrer: "no-referrer",
+        body: JSON.stringify(data),
+      }).then(response => response.json());
+    }
+    //Calling above function
+    logInToAccount(fetchURL, {username: username, password: password})
+      .then(data => {
+        let passwordResponse = JSON.stringify(data);
+        console.log(passwordResponse);
+        if (passwordResponse === "\"passwords match\"" && username === "s.harrier") {
+          console.log('password correct, state updated');
           this.setState({
             isAdmin: true
           })
+        } else {
+          console.log('username or password incorrect');
         }
+
       })
+      .catch(error => console.log(error));
     }
     changeDisplay(dis1, dis2) {
         this.setState({
