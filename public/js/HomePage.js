@@ -41,7 +41,7 @@ class HomePage extends React.Component{
           },
           redirect: "follow",
           referrer: "no-referrer",
-          body: JSON.stringify(data),
+          body: data,
         }).then(response => response.json());
       };
       //Calling above function
