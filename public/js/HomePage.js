@@ -18,8 +18,9 @@ class HomePage extends React.Component{
         }
     };
     testUser(username, password){
-      fetch('/users/1').then(response => response.json()).then(data =>{
-        if (data.username === username && data.password === password) {
+      fetch(`https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`).then(response => response.json()).then(data =>{
+        passwordResponse = JSON.stringify(data);
+        if (passwordResponse === "\"passwords match\"") {
           this.setState({
             isAdmin: true
           })

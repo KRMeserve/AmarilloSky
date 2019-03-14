@@ -15,8 +15,8 @@ Rails.application.routes.draw do
 
   get '/members/:id', to: 'members#show'
 
-  get '/users', to: 'users#index'
-
-  get '/users/:id', to: 'users#show'
+  # get '/users', to: 'users#index'
+  #
+  # get '/users/:id', to: 'users#show'
 
 end
