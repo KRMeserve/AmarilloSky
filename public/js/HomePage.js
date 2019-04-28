@@ -28,8 +28,7 @@ class HomePage extends React.Component{
       //     })
       //   }
       // })
-      const fetchURL = `http://localhost:4000/users?username=${username}&password=${password}`;
-      // const fetchURL = `https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`;
+      const fetchURL = `https://alfr3d-db.herokuapp.com/users?username=${username}&password=${password}`;
       //Function that will send the POST request to the server.
       const logInToAccount = (url = '' , data = {})=>{
         console.log(data);
