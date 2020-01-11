@@ -11,7 +11,7 @@ class Footer extends React.Component{
                     </div>
 
                     <div class="copyright">
-                        <p>© 2018 | Designed and Built by <a href="https://kylemeserve.com/"> Kyle M. </a></p>
+                        <p>© 2020 | Designed and Built by <a href="https://kylemeserve.com/"> Kyle M. </a></p>
                     </div>
                 </footer>
         )
