@@ -3,7 +3,7 @@ class Carousel extends React.Component {
         super(props);
         this.changePicture = this.changePicture.bind(this);
         this.state = {
-            pictures: ['/img/landing-page.png', '/img/carousel6.png', '/img/carousel2.png', '/img/added-carousel.jpg', '/img/added-carousel2.jpg', '/img/added-carousel3.jpg', '/img/added-carousel4.png', '/img/added-carousel5.jpg', '/img/added-carousel6.jpg',],
+            pictures: ['/img/landing-page.png', '/img/carousel6.png', '/img/carousel2.png', '/img/added-carousel.png', '/img/added-carousel2.png', '/img/added-carousel3.png', '/img/added-carousel4.png', '/img/added-carousel5.png', '/img/added-carousel6.png'],
             visiblePicture: '/img/landing-page.png',
             currentPicture: 1
         }
